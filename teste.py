@@ -1,11 +1,11 @@
 #!/usr/bin/python
 
-with open('ifcfg-enp0s20u4', "a+") as arq:
+with open('ifcfg-em1', "a+") as arq:
 	for i in arq.readlines():
+            i = i.replace('yes' , 'talvez')
 	    conteudo = i
-#	    print(conteudo)
+            print(conteudo)
 with open ('testando.txt' , 'w+') as novo:
-	for i in novo.readlines():
-	    conteudo.replace('yes' , 'talvez')
-	    conteudo = conteudo	
-	    novo.append(conteudo)
+	for x in conteudo:
+	    novo.writelines(conteudo)
+	
